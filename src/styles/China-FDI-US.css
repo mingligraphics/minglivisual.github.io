@@ -122,6 +122,10 @@ p.note {
   font-size:0.85rem;
 }
 
+p.source-text{
+  font-size:0.75rem;
+}
+
 /* chart styles */
 
 .chart-section {

@@ -23,18 +23,27 @@ analytics": ""
   and you can just throw it in anywhere!
 -->
 
-{{> China-FDI/basic }}
 
 <!-- 
   Charts are exactly the same.
 -->
-
 <div class="story-body">
-    <h2>Chinese Investment in U.S. by Industry</h2>
     <p>I have the <code>script</code> tag that points to <code>chart-01.js</code> inside of this partial</p>
 </div>
+
 {{> China-FDI/illustrator-01 }}
 
+<div class="story-body">
+    <p class='source-text'>Source: Rodium Group</p>
+</div>
+<div class="story-body">
+  <p><strong>Roles involved: </strong>Data cleaning, Python, design, d3.js, ai2html and web implementation</p>
+  <p><strong>Data and codes: </strong><a href="https://github.com/mingligraphics/data-studio-projects/tree/master/Week%204/China_FDI">Github Page</p>
+  <!-- If you use images, the path is just images/___ -->
+  <p style="text-align: center"><img src=""></p>
+  <p></p>
+</div>
+<link rel="stylesheet" href="styles/China-FDI-US.css">
 
 <!-- 
   If you want to use something exported from ai2html...
@@ -50,7 +59,9 @@ analytics": ""
   although it's a little less organized looking
 -->
 
-<div class="story-body">
-    <h2>Here is some body copy</h2>
-    <p>I can put code in <code>src/index.hbs</code> directly, but it's nicer to put it in a partial.</p>
+<div class="footer">
+  <p><strong>You may be interested:</strong></p>
+    <ul><a class="nav-link" href="China-FDI-US.hbs">Chinese Investment in U.S. Slumped amid Trade War</a></ul>
+    <ul><a class="nav-link" href="China-FDI-Globally.hbs">Chinese Investment Globally</a></ul>
 </div>
+
