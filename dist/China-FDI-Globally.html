@@ -63,7 +63,7 @@
   </nav>  
   <div class="header">
       <p class="kicker"></p>
-      <h1 class="headline">Chinese investment Globally</h1>
+      <h1 class="headline">Chinese investment Globally (2015-2018)</h1>
       <h2 class="subhead"></h2>
       <p class="byline">
               Ming Li
@@ -77,31 +77,33 @@
   This line means, use default.hbs layout from src/html/layouts/
 -->
 
-
 <!-- 
   Put some content into an .hbs file inside of /partials, 
   and you can just throw it in anywhere!
 -->
 
-<div class="story-body">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, elit tincidunt dapibus interdum, dui ligula tincidunt arcu, sed euismod lorem lacus quis metus. Aliquam non feugiat mi. Nam dictum arcu at magna sollicitudin tristique.</p>
-  <p>Quisque commodo, orci a varius rhoncus, diam magna consectetur lectus, tincidunt consectetur lectus ipsum vel leo. Mauris in augue eu ex euismod facilisis ac quis ipsum.</p>
-  <!-- If you use images, the path is just images/___ -->
-  <p style="text-align: center"><img src=""></p>
-  <p>Phasellus lacus lectus, semper ut mollis vitae, fermentum ac massa. Duis pulvinar, lorem non interdum bibendum, sapien tellus volutpat massa, mollis sodales lectus ligula eget ex. Donec hendrerit imperdiet commodo. Fusce ut leo sed purus posuere tempor ut bibendum lectus. Aenean sem purus, euismod ut fringilla ultricies, convallis a nulla.</p>
-</div>
+
 <!-- 
   Charts are exactly the same.
 -->
 
 
 <div class="story-body">
-    <h2>Chinese Investment Globally</h2>
-    <p>I have the <code>script</code> tag that points to <code>chart-01.js</code> inside of this partial</p>
+    <h2>Chinese Global Investment: A Diverse Trend</h2>
+    <p>Chinese investment grows in Africa and South American while declines in Europe and the United States ($million).</p>
     <div id="chart-China-FDI-US-02"></div>
+    <p class="chart-source">Source: The American Enterprise Institute</p>
+</div>
+<div class="story-body">
+  <p><strong>Roles involved: </strong>Data cleaning, Python, design, d3.js and web implementation</p>
+  <p><strong>Data and coding: </strong><a href="https://github.com/mingligraphics/data-studio-projects/tree/master/Week%204/China_FDI">Github Page</a></p>
+  <!-- If you use images, the path is just images/___ -->
+  <p style="text-align: center"><img src=""></p>
+  <p></p>
 </div>
 
 <script src="/chart-China-FDI-US-02.f711c56c.js"></script>
+
 <!-- 
   If you want to use something exported from ai2html...
     1. Rename the exported .html file to .hbs
@@ -116,15 +118,14 @@
   although it's a little less organized looking
 -->
 
-<div class="story-body">
-    <h2>Here is some body copy</h2>
-    <p>I can put code in <code>src/index.hbs</code> directly, but it's nicer to put it in a partial.</p>
+<div class="footer">
+  <p><strong>You may be interested:</strong></p>
+    <ul><a class="nav-link" href="/China-FDI-US.html">Chinese Investment in U.S. Slumped amid Trade War</a></ul>
+    <ul><a class="nav-link" href="/China-FDI-US-Industry.html">Chinese Investment in U.S. by Industry</a></ul>
 </div>
 
 
-    <div class="footer">
-        &copy; <a href=""></a> 2019
-    </div>  </main>
+  </main>
 
   <!-- We'll always keep this JS file around -->
   <script src="/ai2html-resizer.3f82c282.js"></script>

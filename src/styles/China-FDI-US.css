@@ -145,7 +145,7 @@ p.chart-title {
   font-size:1.3rem;
   font-weight:700;
   max-width:700px;
-  margin:0px auto 5px auto;
+  margin:0 auto 5px auto;
 }
 p.chart-subhead {
   margin:0 auto;
