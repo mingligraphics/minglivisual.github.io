@@ -127,7 +127,9 @@ function ready(datapoints) {
     color: '#9e4b6c'
     // dy: 137,
     // dx: 262
-  }
+  },
+  
+
 ]
 
 const type = d3Annotation.annotationCustomType(
