@@ -23,7 +23,7 @@ const yPositionScale = d3
   .range([height, 0])
   .padding(0.5)
 
-d3.csv(require('../data/leisure_2.csv'))
+d3.csv(require('../../data/leisure_2.csv'))
   .then(ready)
   .catch(err => {
     console.log(err)

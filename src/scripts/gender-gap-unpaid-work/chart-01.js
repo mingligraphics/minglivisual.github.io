@@ -46,7 +46,7 @@ const tipWomen = d3
 
 svg.call(tipWomen)
 
-d3.csv(require('../data/unpaid_3.csv'))
+d3.csv(require('../../data/unpaid_3.csv'))
   .then(ready)
   .catch(err => {
     console.log(err)
