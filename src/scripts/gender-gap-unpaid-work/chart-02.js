@@ -1,9 +1,9 @@
 import * as d3 from 'd3'
 import d3Annotation from 'd3-svg-annotation'
 
-const margin = { top: 120, left: 100, right: 50, bottom: 50 }
-const height = 800 - margin.top - margin.bottom
-const width = 800 - margin.left - margin.right
+const margin = { top: 120, left: 100, right: 80, bottom: 50 }
+const height = 700 - margin.top - margin.bottom
+const width = 750 - margin.left - margin.right
 
 const svg = d3
   .select('#chart-2')
@@ -136,6 +136,8 @@ function ready(datapoints) {
     .attr('class', 'axis y-axis')
     .call(yAxis)
     .attr('font-size', '12')
+  
+  svg.select('.x-axis').lower()
 
   svg.selectAll('.y-axis path, .y-axis line').remove()
   svg.selectAll('.x-axis-2 path, .x-axis-2 line').remove()

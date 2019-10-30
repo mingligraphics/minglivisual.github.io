@@ -33229,11 +33229,11 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 var margin = {
   top: 120,
   left: 100,
-  right: 50,
+  right: 80,
   bottom: 50
 };
-var height = 800 - margin.top - margin.bottom;
-var width = 800 - margin.left - margin.right;
+var height = 700 - margin.top - margin.bottom;
+var width = 750 - margin.left - margin.right;
 var svg = d3.select('#chart-2').append('svg').attr('height', height + margin.top + margin.bottom).attr('width', width + margin.left + margin.right).append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 var xPositionScale = d3.scaleLinear().domain([0, 400]).range([0, width]);
 var yPositionScale = d3.scalePoint().range([height, 0]).padding(0.5);
@@ -33299,6 +33299,7 @@ function ready(datapoints) {
   svg.selectAll('.x-axis path').remove();
   var yAxis = d3.axisLeft(yPositionScale);
   svg.append('g').attr('class', 'axis y-axis').call(yAxis).attr('font-size', '12');
+  svg.select('.x-axis').lower();
   svg.selectAll('.y-axis path, .y-axis line').remove();
   svg.selectAll('.x-axis-2 path, .x-axis-2 line').remove();
   svg.append('text').attr('font-size', '18').attr('text-anchor', 'middle').text('The global gender gap in leisure time').attr('x', width / 2).attr('y', -100).attr('dx', -40).attr('font-weight', 'bold');

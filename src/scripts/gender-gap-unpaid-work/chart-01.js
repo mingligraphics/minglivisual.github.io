@@ -4,9 +4,9 @@ import d3Annotation from 'd3-svg-annotation'
 
 d3.tip = d3Tip
 
-const margin = { top: 120, left: 100, right: 50, bottom: 50 }
-const height = 800 - margin.top - margin.bottom
-const width = 800 - margin.left - margin.right
+const margin = { top: 120, left: 100, right: 80, bottom: 50 }
+const height = 700 - margin.top - margin.bottom
+const width = 750 - margin.left - margin.right
 
 const svg = d3
   .select('#chart-1')
@@ -112,19 +112,27 @@ function ready(datapoints) {
           'Indian women do five hours more unpaid work than men, the widest gap in the world.',
         wrap: 118
       },
-      x: 672,
-      y: 152,
+      connector: {
+        end: "arrow",        // none, or arrow or dot         // Number of break in the curve
+        lineType : "horizontal"
+      },
+      x: 603,
+      y: 149,
       dy: 40,
       dx: 20
     },
     {
       note: {
-        label: 'Japanese men do least unpaid work, about 40 minutes per day.',
+        label: 'Japanese men do the least unpaid work, about 40 minutes per day.',
         wrap: 70
       },
-      x: 165,
-      y: 662,
-      dy: -10,
+      connector: {
+        end: "arrow",        // none, or arrow or dot         // Number of break in the curve
+        lineType : "horizontal"
+      },
+      x: 158,
+      y: 573,
+      dy: -20,
       dx: 0
     }
   ]
@@ -133,7 +141,7 @@ function ready(datapoints) {
 
   d3.select('svg')
     .append('g')
-    .style('font-size', '12px')
+    .style('font-size', '11px')
     .call(makeAnnotations)
 
   const xAxis = d3.axisBottom(xPositionScale).tickSize(-height)
@@ -151,10 +159,12 @@ function ready(datapoints) {
 
   svg
     .selectAll('.x-axis line')
-    .attr('stroke-dasharray', '1 4')
+    .attr('stroke-dasharray', '1 6')
     .attr('fill', 'lightgrey')
 
   svg.selectAll('.x-axis path').remove()
+
+  svg.select('.x-axis').lower()
 
   const yAxis = d3.axisLeft(yPositionScale)
   svg
@@ -172,7 +182,7 @@ function ready(datapoints) {
     .attr('text-anchor', 'middle')
     .text('The global gender gap in unpaid work')
     .attr('x', width / 2)
-    .attr('y', -100)
+    .attr('y', -40)
     .attr('dx', -40)
     .attr('font-weight', 'bold')
 }

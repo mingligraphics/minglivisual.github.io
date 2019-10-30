@@ -33568,11 +33568,11 @@ d3.tip = _d3Tip.default;
 var margin = {
   top: 120,
   left: 100,
-  right: 50,
+  right: 80,
   bottom: 50
 };
-var height = 800 - margin.top - margin.bottom;
-var width = 800 - margin.left - margin.right;
+var height = 700 - margin.top - margin.bottom;
+var width = 750 - margin.left - margin.right;
 var svg = d3.select('#chart-1').append('svg').attr('height', height + margin.top + margin.bottom).attr('width', width + margin.left + margin.right).append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 var xPositionScale = d3.scaleLinear().domain([0, 400]).range([0, width]);
 var yPositionScale = d3.scalePoint().range([height, 0]).padding(0.5);
@@ -33615,34 +33615,45 @@ function ready(datapoints) {
       label: 'Indian women do five hours more unpaid work than men, the widest gap in the world.',
       wrap: 118
     },
-    x: 672,
-    y: 152,
+    connector: {
+      end: "arrow",
+      // none, or arrow or dot         // Number of break in the curve
+      lineType: "horizontal"
+    },
+    x: 603,
+    y: 149,
     dy: 40,
     dx: 20
   }, {
     note: {
-      label: 'Japanese men do least unpaid work, about 40 minutes per day.',
+      label: 'Japanese men do the least unpaid work, about 40 minutes per day.',
       wrap: 70
     },
-    x: 165,
-    y: 662,
-    dy: -10,
+    connector: {
+      end: "arrow",
+      // none, or arrow or dot         // Number of break in the curve
+      lineType: "horizontal"
+    },
+    x: 158,
+    y: 573,
+    dy: -20,
     dx: 0
   }];
 
   var makeAnnotations = _d3SvgAnnotation.default.annotation().annotations(annotations);
 
-  d3.select('svg').append('g').style('font-size', '12px').call(makeAnnotations);
+  d3.select('svg').append('g').style('font-size', '11px').call(makeAnnotations);
   var xAxis = d3.axisBottom(xPositionScale).tickSize(-height);
   svg.append('g').attr('class', 'axis x-axis').attr('transform', 'translate(0,' + height + ')').call(xAxis);
   svg.append('g').attr('class', 'axis x-axis-2').attr('transform', 'translate(0, -15)').call(xAxis);
-  svg.selectAll('.x-axis line').attr('stroke-dasharray', '1 4').attr('fill', 'lightgrey');
+  svg.selectAll('.x-axis line').attr('stroke-dasharray', '1 6').attr('fill', 'lightgrey');
   svg.selectAll('.x-axis path').remove();
+  svg.select('.x-axis').lower();
   var yAxis = d3.axisLeft(yPositionScale);
   svg.append('g').attr('class', 'axis y-axis').call(yAxis).attr('font-size', '12');
   svg.selectAll('.y-axis path, .y-axis line').remove();
   svg.selectAll('.x-axis-2 path, .x-axis-2 line').remove();
-  svg.append('text').attr('font-size', '18').attr('text-anchor', 'middle').text('The global gender gap in unpaid work').attr('x', width / 2).attr('y', -100).attr('dx', -40).attr('font-weight', 'bold');
+  svg.append('text').attr('font-size', '18').attr('text-anchor', 'middle').text('The global gender gap in unpaid work').attr('x', width / 2).attr('y', -40).attr('dx', -40).attr('font-weight', 'bold');
 }
 },{"d3":"../node_modules/d3/index.js","d3-tip":"../node_modules/d3-tip/index.js","d3-svg-annotation":"../node_modules/d3-svg-annotation/indexRollupNext.js","../../data/unpaid_3.csv":"data/unpaid_3.csv"}]},{},["scripts/gender-gap-unpaid-work/chart-01.js"], null)
 //# sourceMappingURL=/chart-01.6c0e0adf.js.map
