@@ -148,7 +148,17 @@ function ready(datapoints) {
     .attr('text-anchor', 'middle')
     .text('The global gender gap in leisure time')
     .attr('x', width / 2)
-    .attr('y', -100)
+    .attr('y', -70)
     .attr('dx', -40)
     .attr('font-weight', 'bold')
+
+
+    svg
+    .append('text')
+    .attr('font-size', '14')
+    .attr('text-anchor', 'right')
+    .text('(minutes per day)')
+    .attr('x', width / 2)
+    .attr('y', -40)
+    .attr('dx', 60)
 }

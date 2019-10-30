@@ -33566,7 +33566,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 d3.tip = _d3Tip.default;
 var margin = {
-  top: 120,
+  top: 100,
   left: 100,
   right: 80,
   bottom: 50
@@ -33612,8 +33612,8 @@ function ready(datapoints) {
   });
   var annotations = [{
     note: {
-      label: 'Indian women do five hours more unpaid work than men, the widest gap in the world.',
-      wrap: 118
+      label: 'Indian women do 5 hours more unpaid work than men, the widest gap in the world.',
+      wrap: 90
     },
     connector: {
       end: "arrow",
@@ -33621,13 +33621,13 @@ function ready(datapoints) {
       lineType: "horizontal"
     },
     x: 603,
-    y: 149,
+    y: 130,
     dy: 40,
     dx: 20
   }, {
     note: {
-      label: 'Japanese men do the least unpaid work, about 40 minutes per day.',
-      wrap: 70
+      label: 'Japanese men do the least unpaid work: about 40 minutes per day.',
+      wrap: 80
     },
     connector: {
       end: "arrow",
@@ -33653,7 +33653,8 @@ function ready(datapoints) {
   svg.append('g').attr('class', 'axis y-axis').call(yAxis).attr('font-size', '12');
   svg.selectAll('.y-axis path, .y-axis line').remove();
   svg.selectAll('.x-axis-2 path, .x-axis-2 line').remove();
-  svg.append('text').attr('font-size', '18').attr('text-anchor', 'middle').text('The global gender gap in unpaid work').attr('x', width / 2).attr('y', -40).attr('dx', -40).attr('font-weight', 'bold');
+  svg.append('text').attr('font-size', '18').attr('text-anchor', 'middle').text('The global gender gap in unpaid work').attr('x', width / 2).attr('y', -70).attr('dx', -40).attr('font-weight', 'bold');
+  svg.append('text').attr('font-size', '14').attr('text-anchor', 'right').text('(minutes per day)').attr('x', width / 2).attr('y', -40).attr('dx', 60);
 }
 },{"d3":"../node_modules/d3/index.js","d3-tip":"../node_modules/d3-tip/index.js","d3-svg-annotation":"../node_modules/d3-svg-annotation/indexRollupNext.js","../../data/unpaid_3.csv":"data/unpaid_3.csv"}]},{},["scripts/gender-gap-unpaid-work/chart-01.js"], null)
 //# sourceMappingURL=/chart-01.6c0e0adf.js.map

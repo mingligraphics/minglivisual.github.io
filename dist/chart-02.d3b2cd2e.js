@@ -33302,7 +33302,8 @@ function ready(datapoints) {
   svg.select('.x-axis').lower();
   svg.selectAll('.y-axis path, .y-axis line').remove();
   svg.selectAll('.x-axis-2 path, .x-axis-2 line').remove();
-  svg.append('text').attr('font-size', '18').attr('text-anchor', 'middle').text('The global gender gap in leisure time').attr('x', width / 2).attr('y', -100).attr('dx', -40).attr('font-weight', 'bold');
+  svg.append('text').attr('font-size', '18').attr('text-anchor', 'middle').text('The global gender gap in leisure time').attr('x', width / 2).attr('y', -70).attr('dx', -40).attr('font-weight', 'bold');
+  svg.append('text').attr('font-size', '14').attr('text-anchor', 'right').text('(minutes per day)').attr('x', width / 2).attr('y', -40).attr('dx', 60);
 }
 },{"d3":"../node_modules/d3/index.js","d3-svg-annotation":"../node_modules/d3-svg-annotation/indexRollupNext.js","../../data/leisure_2.csv":"data/leisure_2.csv"}]},{},["scripts/gender-gap-unpaid-work/chart-02.js"], null)
 //# sourceMappingURL=/chart-02.d3b2cd2e.js.map

@@ -4,7 +4,7 @@ import d3Annotation from 'd3-svg-annotation'
 
 d3.tip = d3Tip
 
-const margin = { top: 120, left: 100, right: 80, bottom: 50 }
+const margin = { top: 100, left: 100, right: 80, bottom: 50 }
 const height = 700 - margin.top - margin.bottom
 const width = 750 - margin.left - margin.right
 
@@ -109,22 +109,22 @@ function ready(datapoints) {
     {
       note: {
         label:
-          'Indian women do five hours more unpaid work than men, the widest gap in the world.',
-        wrap: 118
+          'Indian women do 5 hours more unpaid work than men, the widest gap in the world.',
+        wrap: 90
       },
       connector: {
         end: "arrow",        // none, or arrow or dot         // Number of break in the curve
         lineType : "horizontal"
       },
       x: 603,
-      y: 149,
+      y: 130,
       dy: 40,
       dx: 20
     },
     {
       note: {
-        label: 'Japanese men do the least unpaid work, about 40 minutes per day.',
-        wrap: 70
+        label: 'Japanese men do the least unpaid work: about 40 minutes per day.',
+        wrap: 80
       },
       connector: {
         end: "arrow",        // none, or arrow or dot         // Number of break in the curve
@@ -182,7 +182,16 @@ function ready(datapoints) {
     .attr('text-anchor', 'middle')
     .text('The global gender gap in unpaid work')
     .attr('x', width / 2)
-    .attr('y', -40)
+    .attr('y', -70)
     .attr('dx', -40)
     .attr('font-weight', 'bold')
+
+    svg
+    .append('text')
+    .attr('font-size', '14')
+    .attr('text-anchor', 'right')
+    .text('(minutes per day)')
+    .attr('x', width / 2)
+    .attr('y', -40)
+    .attr('dx', 60)
 }
