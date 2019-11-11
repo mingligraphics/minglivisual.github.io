@@ -1,4 +1,4 @@
-<div class="row">
+{{!-- <div class="row">
   <div class="col-12">
     <h1>{{ headline }}</h1>
 
@@ -6,4 +6,17 @@
       <p class="alert alert-warning">{{{ kicker }}}</p>
     {{/if}}
   </div>
+</div> --}}
+
+<div class="header">
+    <h1 class="headline">{{ headline }}</h1>
+    <h2 class="subhead">{{ subhead }}</h2>
+    <p class="byline">
+        {{#if author.url }}
+            <a href="{{ author.url }}">{{ author.name }}</a>
+        {{else}}
+            {{ author.name }}
+        {{/if}}
+    </p>
+    <p class="date">Published {{ published_date }}</p>
 </div>
